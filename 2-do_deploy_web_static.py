@@ -10,7 +10,7 @@ def do_deploy(archive_path):
     """Deploy a tar file"""
     if os.path.isfile(archive_path) is False:
         return False
-    tgz_f = archive_path.split('/')[1]
+    tgz_f = archive_path.split('/')[-1]
     dir_name = tgz_f.split('.')[0]
     if put(archive_path, "/tmp/{}".format(tgz_f)).failed is True:
         return False
