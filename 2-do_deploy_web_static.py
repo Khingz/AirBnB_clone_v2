@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """Comment"""
-from fabric.api import run, env, put
+from fabric.api import env
+from fabric.api import put
+from fabric.api import run
 import os.path
 
 env.hosts = ['100.25.158.180', '100.26.253.232']
