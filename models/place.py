@@ -46,7 +46,7 @@ class Place(BaseModel, Base):
                 if review.place_id == self.id:
                     reviews_list.append(review)
             return reviews_list
-        
+
         @property
         def amenities(self):
             """Get Amenities."""

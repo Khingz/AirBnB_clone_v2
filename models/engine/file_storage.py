@@ -64,3 +64,7 @@ class FileStorage:
             if item_key == obj_key:
                 del FileStorage.__objects[obj_key]
         FileStorage.save(self)
+
+    def close(self):
+        """calls relaod method"""
+        self.reload()
