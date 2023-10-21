@@ -42,6 +42,8 @@ class DBStorage:
             query_datas.extend(self.__session.query(Review).all())
             query_datas.extend(self.__session.query(Amenity).all())
         else:
+            if type(cls) == str:
+                cls = eval(cls)
             query_datas = self.__session.query(cls).all()
         for data in query_datas:
             key = f"{type(data).__name__}.{data.id}"
